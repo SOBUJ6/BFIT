@@ -62,7 +62,7 @@ function checkout() {
         return;
     }
 
-    let phoneNumber = "88017XXXXXXXX"; // এখানে আপনার সঠিক হোয়াটসঅ্যাপ নাম্বারটি দিন (যেমন: 8801700000000)
+    let phoneNumber = "01607713897"; // এখানে আপনার সঠিক হোয়াটসঅ্যাপ নাম্বারটি দিন (যেমন: 8801700000000)
     let message = "Hello Trendy Wear, I want to order:\n\n";
 
     cart.forEach(item => {
