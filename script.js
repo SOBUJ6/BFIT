@@ -21,7 +21,7 @@ function addToCart(name, price) {
     updateCartUI();
 }
 
-// কার্টের ইন্টারফেস আপডেট করার ফাংশন
+// কার্টের ইন্টারফেস আপডেট করার ফাংশन
 function updateCartUI() {
     const cartItemsContainer = document.getElementById('cart-items');
     const cartCount = document.getElementById('cart-count');
@@ -55,15 +55,16 @@ function updateCartUI() {
     cartTotal.innerText = totalMoney;
 }
 
-// অর্ডার করার ফাংশন (যা সরাসরি হোয়াটসঅ্যাপে মেসেজ পাঠাবে)
+// অর্ডার করার ফাংশন (যা সরাসরি আপনার হোয়াটসঅ্যাপে মেসেজ পাঠাবে)
 function checkout() {
     if (cart.length === 0) {
         alert("Your cart is empty!");
         return;
     }
 
-    let phoneNumber = "01607713897"; // এখানে আপনার সঠিক হোয়াটসঅ্যাপ নাম্বারটি দিন (যেমন: 8801700000000)
-    let message = "Hello Trendy Wear, I want to order:\n\n";
+    // আপনার নাম্বারটি কান্ট্রি কোডসহ এখানে যুক্ত করা হয়েছে
+    let phoneNumber = "8801607713897"; 
+    let message = "Hello, I want to order:\n\n";
 
     cart.forEach(item => {
         message += `- ${item.name} (Qty: ${item.quantity}) - ৳${item.price * item.quantity}\n`;
@@ -72,8 +73,8 @@ function checkout() {
     let totalMoney = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     message += `\nTotal Amount: ৳${totalMoney}\nPlease confirm my order.`;
 
-    // ইউআরএল এনকোড করে হোয়াটসঅ্যাপে পাঠানো
-    let whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    // ইউআরএল এনকোড করে হোয়াটসঅ্যাপের অফিসিয়াল লিংকে পাঠানো
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappURL, '_blank');
 }
