@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Wear - Shirt & T-Shirt Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">Trendy<span>Wear</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Upgrade Your Style</h1>
+            <p>Premium quality Shirts & T-Shirts at the best prices.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>Our Collection</h2>
+        <div class="product-container">
+            
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Premium Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Casual Shirt</h3>
+                    <p class="price">৳১২০০</p>
+                    <button class="add-to-cart" onclick="addToCart('Premium Casual Shirt', 1200)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Classic T-Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Cotton T-Shirt</h3>
+                    <p class="price">৳৪৫০</p>
+                    <button class="add-to-cart" onclick="addToCart('Classic Cotton T-Shirt', 450)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Black T-Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Black T-Shirt</h3>
+                    <p class="price">৳৫০০</p>
+                    <button class="add-to-cart" onclick="addToCart('Premium Black T-Shirt', 500)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=500" alt="Formal Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Formal Slim-Fit Shirt</h3>
+                    <p class="price">৳১৫০০</p>
+                    <button class="add-to-cart" onclick="addToCart('Formal Slim-Fit Shirt', 1500)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <i class="fas fa-times close-btn" onclick="toggleCart()"></i>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: ৳<span id="cart-total">0</span></div>
+            <button class="checkout-btn" onclick="checkout()">Order Now (WhatsApp)</button>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Trendy Wear. All Rights Reserved.</p>
+        <p>Contact us: support@trendywear.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
